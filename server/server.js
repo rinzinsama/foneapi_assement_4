@@ -2,41 +2,6 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 require('dotenv').config();
-// const http = require('http').Server(app);
-// const io = require('socket.io')(http);
-// const cors = require('cors');
-
-// Enable CORS with custom options
-// app.use(cors({
-//   origin: 'http://localhost:8080', // specify the allowed origin
-//   methods: 'GET, POST', // specify the allowed HTTP methods
-//   allowedHeaders: 'Content-Type, Authorization', // specify the allowed headers
-// }));
-
-// io.on('connection', (socket) => {
-//   console.log('A user connected');
-
-//   // Example event handler
-//   socket.on('chatMessage', async (message) => {
-//     console.log('Received message:', message);
-
-//     try {
-//       // Create a new user object
-//       const newMessage = new Message(message);
-//       await newMessage.save();
-
-//       // Broadcast the new message to all connected clients
-//       io.emit('chatMessage', newMessage);
-//     } catch (error) {
-//       console.error('Error saving message', error);
-//     }
-//   });
-
-//   // Handle disconnection
-//   socket.on('disconnect', () => {
-//     console.log('A user disconnected');
-//   });
-// });
 
 
 mongoose.connect(process.env.DB_URL, { useNewUrlParser: true, useUnifiedTopology: true })

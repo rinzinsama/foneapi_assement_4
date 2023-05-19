@@ -43,21 +43,12 @@ export default defineComponent({
     }
 
     console.log(this.$q.localStorage.getItem('LOGIN_USER'))
-    // console.log(this.hoursPast(new Date('2023-05-19T09:13:18')))
 
     this.getMessages()
 
     setInterval(() => { this.getMessages() }, 3000);
 
-    // Establish WebSocket connection
-    // this.socket = io('http://localhost:3000'); // Update the server URL with the correct port
-
-    // Listen for chat messages
-    // this.socket.on('chatMessage', (message) => {
-    //   // Update the messages array with the new message
-    //   message.isSent = this.$q.localStorge.gaetItem('LOGIN_USER')._id === message.sender;
-    //   this.messages.push(message);
-    // });
+ 
   },
   methods: {
     async sendMessage() {
@@ -71,12 +62,7 @@ export default defineComponent({
         if (response) {
           this.text_message = ''
           this.getMessages()
-          // console.log("sent")
-          // this.socket.emit('chatMessage', {
-          //   message: this.text_message,
-          //   sender: this.$q.localStorage.getItem('LOGIN_USER')._id,
-          //   name: this.$q.localStorage.getItem('LOGIN_USER').displayname,
-          // });
+          
         }
 
         console.log(response.data); // You can customize the handling of the response
