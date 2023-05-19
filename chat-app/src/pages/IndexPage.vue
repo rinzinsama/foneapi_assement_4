@@ -11,7 +11,7 @@
 
     </div>
     <div class="q-pa-xs col-12">
-      <q-input v-model="text_message" dense filled>
+      <q-input v-model="text_message" dense filled @keyup.enter="sendMessage">
         <template v-slot:after>
           <q-btn round dense flat color="primary" icon="send" @click="sendMessage" />
         </template>
