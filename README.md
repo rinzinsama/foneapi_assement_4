@@ -1,18 +1,18 @@
-# foneapi_assement_4
-
-chat_api (CLIENT)
-cd chat_api 
-npm install 
-
-copy .env.example rename to .env
-
-quasar dev
+# assement pt.4 using quasarjs and expressjs
 
 
-#server
-cd server 
 
-npm install
+# How to run client side
+- cd chat_app 
+- npm install
+- quasar dev
 
-node server.js
+# How to run server side
+- cd server 
+- npm install
+- node server.js
 
+#referrences
+ - quasar.dev
+ - mongoose
+ - expressjs
